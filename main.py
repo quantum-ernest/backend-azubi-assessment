@@ -59,7 +59,9 @@ Base.metadata.create_all(bind=engine)
 limiter = Limiter(key_func=get_remote_address, default_limits=["50/minutes"])
 
 app = FastAPI(
-    title="API FOR PRODUCT LIST AND SHOPPING CART - ASSESSMENT", lifespan=lifespan
+    title="API FOR PRODUCT LIST AND SHOPPING CART - ASSESSMENT",
+    description="‼️‼️‼️‼️**ADMIN DEFAULT PASSWORD IS PROVIDED IN THE DESCRIPTION OF THE LOGIN ENDPOINT** '/auth/login' ‼️‼️‼️‼️",
+    lifespan=lifespan,
 )
 
 
