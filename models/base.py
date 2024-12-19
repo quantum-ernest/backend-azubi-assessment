@@ -22,21 +22,8 @@ class Base(DeclarativeBase):
         session.commit()
         return record
 
-    # @classmethod
-    # def update(cls, session: Session, **kwargs):
-    #     data = kwargs.get("data")
-    #     record = session.scalars(
-    #         update(cls).where(cls.id == data.get("id")).returning(cls), data
-    #     ).first()
-    #     session.commit()
-    #     return record
-
     @classmethod
     def delete(cls, session: Session, pk_id):
         session.execute(delete(cls).where(cls.id == pk_id))
         session.commit()
         return True
-
-    @classmethod
-    def check_if_id_exists(cls, session: Session, pk_id):
-        return True if cls.get_by_id(session, pk_id) else False
