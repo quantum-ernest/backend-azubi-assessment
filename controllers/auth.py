@@ -31,9 +31,11 @@ async def login(credential: LoginSchemaIn, session: Session = Depends(get_db_ses
     Returns:
         LoginSchemaOut: A response model containing the access token for the authenticated user.
 
+    ‼️‼️‼️‼️:
+
     DEFAULT CREDENTIALS:
-        ADMIN_EMAIL  =  admin@example.com,
-        ADMIN_PASSWORD  =  admin,
+        **ADMIN_EMAIL  =  admin@example.com**,
+        **ADMIN_PASSWORD  =  admin**,
     """
     user = UserMapper.get_by_email(session=session, email=credential.email)
     if user is False:
