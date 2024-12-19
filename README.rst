@@ -15,6 +15,20 @@ Features
 - **File Uploads**: Supports uploading product images (JPEG, PNG, GIF).
 - **CORS Middleware**: Configured to allow cross-origin requests.
 
+Hosting
+-------
+This application was hosted using **AWS** for infrastructure and **NGINX** as a reverse proxy to manage requests.
+
+Steps:
+1. **AWS Deployment**:
+   - Deployed the application on an AWS EC2 instance.
+   - Configured security groups to allow traffic from the internet.
+
+2. **NGINX Configuration**:
+   - NGINX was set up as a reverse proxy to route requests from the server's domain or IP address to the FastAPI application.
+
+Visit http://ec2-3-80-180-137.compute-1.amazonaws.com to access the live application.
+
 Requirements
 ------------
 
