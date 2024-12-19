@@ -28,6 +28,8 @@ Configuration:
 """
 
 from fastapi import FastAPI
+from starlette.responses import RedirectResponse
+
 from controllers import (
     auth_router,
     role_router,
@@ -82,4 +84,4 @@ app.include_router(role_router)
 
 @app.get("/")
 async def root():
-    return {"API": "API FOR PRODUCT LIST AND SHOPPING CART"}
+    return RedirectResponse(url="/docs")
